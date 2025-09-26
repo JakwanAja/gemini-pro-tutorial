@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Upgrade Google AI Pro (Gemini Pro) - Gratis 1 Tahun</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            background-image: url('images/header-bg.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(66, 133, 244, 0.8);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .mascot {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #4285f4;
+            margin-bottom: 15px;
+        }
+
+        /* Tutorial Section */
+        .tutorial {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .tutorial h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+        }
+
+        .step {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-header {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            padding: 20px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step-number {
+            background: rgba(255,255,255,0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-content {
+            padding: 30px;
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .document-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .doc-example {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .doc-example img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffecb3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #856404;
+        }
+
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            color: #155724;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .step-header {
+                padding: 15px 20px;
+            }
+            
+            .step-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="images/logo-gsa.png" alt="GSA Logo" class="logo">
+                <h1>Tutorial Upgrade Google AI Pro</h1>
+                <p>Dapatkan Gemini Pro & Penyimpanan Drive 2TB Gratis Selama 1 Tahun!</p>
+                <img src="images/mascot.png" alt="Mascot" class="mascot">
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Keuntungan Google AI Pro</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/icon-1.png" alt="Feature 1" class="feature-icon">
+                    <h3>Akses Unlimited</h3>
+                    <p>Gunakan Gemini Pro tanpa batasan query harian. Ideal untuk mahasiswa yang membutuhkan bantuan AI intensif.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/icon-2.png" alt="Feature 2" class="feature-icon">
+                    <h3>Gratis 1 Tahun</h3>
+                    <p>Nikmati layanan premium google termasuk penyimpanan drive 2TB senilai jutaan rupiah secara gratis selama satu tahun penuh untuk mahasiswa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section class="tutorial">
+        <div class="container">
+            <h2>Langkah-Langkah Tutorial</h2>
+            
+            <!-- Step 1 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(1)">
+                    <div>
+                        <div class="step-number">1</div>
+                        <h3>Klik Link yang Dibagikan</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-1">▼</span>
+                </div>
+                <div class="step-content" id="content-1">
+                    <p>Pertama-tama, klik link/tautan yang telah dibagikan melalui email masing-masing. Pastikan link tersebut valid dan berasal dari sumber terpercaya.</p>
+                    <img src="images/step1.png" alt="Langkah 1" class="step-image">
+                    <div class="warning">
+                        <strong>Peringatan:</strong> Pastikan email yang diterima benar-benar dari Google/program resmi untuk menghindari phishing.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(2)">
+                    <div>
+                        <div class="step-number">2</div>
+                        <h3>Klik "Verifikasi Kelayakan"</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-2">▼</span>
+                </div>
+                <div class="step-content" id="content-2">
+                    <p>Setelah link terbuka, Anda akan diarahkan ke halaman verifikasi. Klik tombol "Verifikasi Kelayakan" untuk melanjutkan proses.</p>
+                    <img src="images/step2.png" alt="Langkah 2" class="step-image">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(3)">
+                    <div>
+                        <div class="step-number">3</div>
+                        <h3>Isi Data dengan Benar</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-3">▼</span>
+                </div>
+                <div class="step-content" id="content-3">
+                    <p>Isi semua data yang diminta dengan benar dan pastikan email yang digunakan adalah email aktif yang dapat Anda akses.</p>
+                    <img src="images/step3a.png" alt="Form Data" class="step-image">
+                    <img src="images/step3b.png" alt="Email Verification" class="step-image">
+                    <div class="warning">
+                        <strong>Penting:</strong> Gunakan email aktif karena konfirmasi akan dikirim ke email tersebut.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(4)">
+                    <div>
+                        <div class="step-number">4</div>
+                        <h3>Upload Dokumen Mahasiswa</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-4">▼</span>
+                </div>
+                <div class="step-content" id="content-4">
+                    <p>Upload dokumen yang membuktikan status mahasiswa Anda. Disarankan mengupload lebih dari 1 dokumen untuk mempercepat verifikasi.</p>
+                    
+                    <h4>Contoh Dokumen yang Benar:</h4>
+                    <div class="document-examples">
+                        <div class="doc-example">
+                            <img src="images/ktm-example.png" alt="KTM">
+                            <h5>KTM (Kartu Tanda Mahasiswa)</h5>
+                        </div>
+                        <div class="doc-example">
+                            <img src="images/krs-example.png" alt="KRS">
+                            <h5>KRS (Kartu Rencana Studi)</h5>
+                        </div>
+                        <div class="doc-example">
+                            <img src="images/ukt-example.png" alt="UKT">
+                            <h5>Bukti Pembayaran UKT</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="success">
+                        <strong>Tips:</strong> Upload KTM + Bukti pembayaran UKT untuk hasil lebih cepat.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(5)">
+                    <div>
+                        <div class="step-number">5</div>
+                        <h3>Tunggu Verifikasi SheerID</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-5">▼</span>
+                </div>
+                <div class="step-content" id="content-5">
+                    <p>Setelah upload dokumen, tunggu proses verifikasi oleh pihak SheerID. Waktu verifikasi bervariasi:</p>
+                    <ul>
+                        <li><strong>Normal:</strong> 30 menit - 2 jam</li>
+                        <li><strong>Traffic tinggi:</strong> Beberapa hari</li>
+                        <li><strong>Dokumen kurang jelas:</strong> Mungkin perlu verifikasi manual</li>
+                    </ul>
+                    <img src="images/step5.png" alt="Proses Verifikasi" class="step-image">
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(6)">
+                    <div>
+                        <div class="step-number">6</div>
+                        <h3>Email Konfirmasi Verifikasi</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-6">▼</span>
+                </div>
+                <div class="step-content" id="content-6">
+                    <p>Setelah terverifikasi, Anda akan menerima email konfirmasi. Klik "Dapatkan Google AI Pro" untuk melanjutkan.</p>
+                    <img src="images/step6.png" alt="Email Konfirmasi" class="step-image">
+                    <div class="success">
+                        <strong>Berhasil!</strong> Verifikasi status mahasiswa Anda telah berhasil dikonfirmasi.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(7)">
+                    <div>
+                        <div class="step-number">7</div>
+                        <h3>Pilih Metode Pembayaran</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-7">▼</span>
+                </div>
+                <div class="step-content" id="content-7">
+                    <p>Pilih metode pembayaran untuk langganan setelah masa gratis berakhir. Tenang, ini bisa dibatalkan kapan saja!</p>
+                    <img src="images/step7.png" alt="Metode Pembayaran" class="step-image">
+                    <div class="warning">
+                        <strong>Catatan:</strong> Pembayaran hanya akan ditagih setelah 1 tahun. Anda bisa membatalkan kapan saja sebelum itu.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(8)">
+                    <div>
+                        <div class="step-number">8</div>
+                        <h3>Selamat! Anda Berhasil!</h3>
+                    </div>
+                    <span class="toggle-icon" id="icon-8">▼</span>
+                </div>
+                <div class="step-content" id="content-8">
+                    <img src="images/step8.png" alt="Selamat" class="step-image">
+                    <p><strong>SELAMAT!</strong> Anda sudah mendapatkan paket Google AI Pro gratis selama 1 tahun.</p>
+                    <p>Silakan cek status langganan Anda di:</p>
+                    <ul>
+                        <li><a href="https://one.google.com/ai-student" target="_blank">https://one.google.com/ai-student</a></li>
+                        <li>Buka aplikasi Gemini di perangkat Anda</li>
+                    </ul>
+                    <div class="success">
+                        <strong>🎉 Sukses!</strong> Nikmati fitur premium Google AI Pro selama 1 tahun penuh!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tutorial Google AI Pro. Dibuat untuk membantu mahasiswa Indonesia.</p>
+            <a href="https://one.google.com/ai-student" class="cta-button" target="_blank">Cek Status Langganan</a>
+            <a href="https://gemini.google.com" class="cta-button" target="_blank">Buka Gemini</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleStep(stepNumber) {
+            const content = document.getElementById(`content-${stepNumber}`);
+            const icon = document.getElementById(`icon-${stepNumber}`);
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.textContent = '▼';
+            } else {
+                // Close all other steps
+                for (let i = 1; i <= 8; i++) {
+                    const otherContent = document.getElementById(`content-${i}`);
+                    const otherIcon = document.getElementById(`icon-${i}`);
+                    if (otherContent) {
+                        otherContent.classList.remove('active');
+                        otherIcon.textContent = '▼';
+                    }
+                }
+                
+                // Open current step
+                content.classList.add('active');
+                icon.textContent = '▲';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+                img.style.transition = 'opacity 0.3s ease';
+                img.style.opacity = '0';
+            });
+        });
+    </script>
+</body>
+</html>
